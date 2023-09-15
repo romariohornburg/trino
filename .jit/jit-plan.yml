@@ -8,13 +8,15 @@ references:
   - https://www.jit.io
 tags: []
 items:
-  - name: Scan code for hard-coded secrets
-    uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
-  - name: |
-      Confirm your hosting model
+  - name: Confirm your hosting model
     uses: >-
       jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
     input:
-      status: passed
       note: ok
+      status: passed
+  - name: Scan code for hard-coded secrets
+    uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
+  - name: Scan your code for vulnerabilities (SAST)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
 
